@@ -41,7 +41,20 @@ public class TestStringManipulations {
         System.out.println(str6.equals(new String(str5)));
         System.out.println(str6.equals(str7));
 
+        String str8 = "needle";
+        String str9 = "***needle in the haystack needle";
+        System.out.println(str9.indexOf(str8));
+        System.out.println(str9.lastIndexOf(str8));
+
+        // empty
+        System.out.println("".isEmpty());
+
+        String str10 = "i want to scan thru";
+        for (int i = 0; i < str10.length(); i++) {
+            System.out.println(str10.charAt(i));
+        }
+
         // split a string into a string array
-        
+
     }
 }
