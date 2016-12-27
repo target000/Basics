@@ -14,6 +14,8 @@ public class TestSet {
         set.add("dog");
         set.add("dog");
 
+        System.out.println(set.toString());
+
         Iterator<String> iter = set.iterator();
         while (iter.hasNext()) {
             String string = (String) iter.next();
@@ -21,6 +23,21 @@ public class TestSet {
         }
 
         System.out.println("size of the set = " + set.size());
+
+        set.remove("dog");
+
+        System.out.println(set.toString());
+
+        System.out.println(set.remove("1"));
+
+        System.out.println(set.toString());
+
+        System.out.println(set.add("fking A!"));
+        System.out.println(set.add("fking A!"));
+        System.out.println(set.add("fking A!"));
+
+        System.out.println(set.remove("fking A!"));
+        System.out.println(set.remove("fking A!"));
 
     }
 }
