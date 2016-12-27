@@ -1,0 +1,47 @@
+
+public class TestStringManipulations {
+
+    public static void main(String[] args) {
+
+        // list out all common string operations
+
+        String str = "   this is a test string    ";
+
+        System.out.println(str.contains("thi"));
+
+        // remove leading and trailing spaces
+        System.out.println(str.trim());
+
+        System.out.println(str.replace(" ", "*"));
+
+        System.out.println(str.replaceAll("\\s+", ""));
+
+        String str2 = "www.ultra.exe";
+
+        System.out.println(str2.endsWith(".exe"));
+
+        System.out.println(str2.startsWith("www"));
+
+        String str3 = "Mary had a little lamb!";
+
+        // 0 based
+        // 0 = starting index, 4 means length
+        System.out.println(str3.substring(0, 4));
+
+        System.out.println(str3.substring(1));
+
+        String str4 = "a";
+        System.out.println(str4.length());
+        String str5 = "ab";
+        System.out.println(str5.length());
+
+        String str6 = "dsfsf";
+        String str7 = "dsfsf";
+        System.out.println(str6.equals(new String(str6)));
+        System.out.println(str6.equals(new String(str5)));
+        System.out.println(str6.equals(str7));
+
+        // split a string into a string array
+        
+    }
+}
