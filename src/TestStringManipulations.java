@@ -55,6 +55,10 @@ public class TestStringManipulations {
         }
 
         // split a string into a string array
+        String[] strArr = str10.split("\\s+");
+        for (String string : strArr) {
+            System.out.println(string);
+        }
 
     }
 }
