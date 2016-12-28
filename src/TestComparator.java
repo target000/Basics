@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class TestArr {
+public class TestComparator {
 
     public static void main(String[] args) {
         Student[] students = new Student[3];
@@ -23,7 +23,7 @@ public class TestArr {
         students[1] = new Student("alex");
         students[2] = new Student("ethan");
 
-        Arrays.sort(students, TestArr.compareByName);
+        Arrays.sort(students, TestComparator.compareByName);
 
         for (int i = 0; i < students.length; i++) {
             System.out.println(students[i].name);
@@ -34,7 +34,7 @@ public class TestArr {
         students[1] = new Student(-1.4);
         students[2] = new Student(66.2);
 
-        Arrays.sort(students, TestArr.compareByGpa);
+        Arrays.sort(students, TestComparator.compareByGpa);
 
         for (int i = 0; i < students.length; i++) {
             System.out.println(students[i].gpa);

@@ -32,10 +32,31 @@ public class TestArrList {
 
         System.out.println("****");
 
+        // syntax to convert the list to array
         String[] test = list.toArray(new String[list.size()]);
         for (int i = 0; i < test.length; i++) {
-            System.out.println(test[i]);
+            // System.out.println(test[i]);
         }
+
+        // remove element from list
+        System.out.println(list.toString());
+
+        list.remove("Tbag");
+
+        System.out.println(list.toString());
+
+        List<Integer> listNumber = new ArrayList<Integer>();
+        listNumber.add(8);
+        listNumber.add(5);
+        listNumber.add(7);
+        listNumber.add(1);
+        listNumber.add(9);
+        System.out.println(listNumber.toString());
+        
+        Collections.sort(listNumber);
+        System.out.println(listNumber.toString());
+        
+        
 
     }
 }
