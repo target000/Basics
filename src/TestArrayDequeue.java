@@ -1,6 +1,5 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.concurrent.SynchronousQueue;
 
 // With regard to why ArrayDeque is a better option, best pratice kinda shit
 // Please fking read 'em and digest 'em mate
@@ -64,6 +63,23 @@ public class TestArrayDequeue {
         System.out.println("LinkedList: add 1,2,3,4,5 remove 1 3");
 
         System.out.println(linkedlist.toString());
+
+        // play with strings
+        Deque<String> wow = new ArrayDeque<String>();
+
+        wow.push("holy");
+        wow.push("fucking");
+        wow.push("shit");
+        wow.push("it");
+        wow.push("does");
+        wow.push("it");
+        wow.push("all");
+
+        System.out.println(wow.toString());
+
+        while (!wow.isEmpty()) {
+            System.out.println(wow.pop());
+        }
 
     }
 }
