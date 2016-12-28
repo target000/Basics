@@ -28,6 +28,7 @@ public class TestStringManipulations {
         // 0 = starting index, 4 means length
         System.out.println(str3.substring(0, 4));
 
+        // take from 2 letter to the end
         System.out.println(str3.substring(1));
 
         String str4 = "a";

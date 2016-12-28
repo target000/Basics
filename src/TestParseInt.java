@@ -11,6 +11,15 @@ public class TestParseInt {
         double val2 = Double.valueOf(str2) * 2;
         System.out.println(val2);
 
+        int a = 1234;
+        String aa = String.valueOf(a);
+
+        
+        
+        // is aa a string test
+        System.out.println(aa instanceof String);
+        System.out.println(aa);
+
     }
 
 }

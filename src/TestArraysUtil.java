@@ -25,8 +25,19 @@ public class TestArraysUtil {
         int[] arr5 = { 1, 2, 4 };
         System.out.println(Arrays.equals(arr3, arr4));
         System.out.println(Arrays.equals(arr3, arr5));
-        
-        
+
+        // System class - copy to existing array
+        int[] source = { 1, 2, 3, 4, 5 };
+        int[] target = new int[source.length];
+
+        System.out.println("before copy");
+        System.out.println(Arrays.toString(target));
+        System.arraycopy(source, 0, target, 0, source.length);
+        System.out.println(Arrays.toString(target));
+
+        // Arrays.copyOf - creates a new array
+        int[] copied = Arrays.copyOf(source, source.length);
+        System.out.println(Arrays.toString(copied));
 
     }
 
