@@ -8,25 +8,25 @@ public class TestPriorityQueue {
         Comparator<String> myComparator = new StringLengthComparator();
 
         // Use PQ based on the comparator
-        // the comparator tells how to compare
-        PriorityQueue<String> queue = new PriorityQueue<String>(10, myComparator);
+        // the comparators specify how to compare
+        PriorityQueue<String> pq = new PriorityQueue<String>(10, myComparator);
 
         // note the order to enqueue
-        queue.add("very long indeed 2");
-        queue.add("medium4");
-        queue.add("medium2");
-        queue.add("short1");
-        queue.add("very long indeed 3");
-        queue.add("medium1");
-        queue.add("medium3");
-        queue.add("short2");
-        queue.add("very long indeed 1");
-        queue.add("medium6");
-        queue.add("short3");
-        queue.add("medium5");
+        pq.add("very long indeed 2");
+        pq.add("medium4");
+        pq.add("medium2");
+        pq.add("short1");
+        pq.add("very long indeed 3");
+        pq.add("medium1");
+        pq.add("medium3");
+        pq.add("short2");
+        pq.add("very long indeed 1");
+        pq.add("medium6");
+        pq.add("short3");
+        pq.add("medium5");
 
-        // there is no order
-        Iterator<String> iter = queue.iterator();
+        // no order during iteration, this only checks what is in the pq
+        Iterator<String> iter = pq.iterator();
         while (iter.hasNext()) {
             Object object = (String) iter.next();
             System.out.println(object);
@@ -34,21 +34,19 @@ public class TestPriorityQueue {
 
         System.out.println("------------");
 
-        while (queue.size() != 0) {
-            System.out.println(queue.remove());
+        // order in dequeue
+        while (pq.size() != 0) {
+            System.out.println(pq.remove());
         }
 
     }
 }
 
-// basically this is the comparision criteria
+// define comparison criteria
 class StringLengthComparator implements Comparator<String> {
     @Override
     public int compare(String x, String y) {
-        // Assume neither string is null. Real code should
-        // probably be more robust
-        // You could also just return x.length() - y.length(),
-        // which would be more efficient.
+
         if (x.length() < y.length()) {
             return -1;
         }
