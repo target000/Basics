@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 // test basic array usage
 public class TestArray {
@@ -24,6 +26,7 @@ public class TestArray {
 
         System.out.println(Arrays.toString(strArr));
 
+        // this is lex sorting
         String[] strArr2 = { "11", "12", "1", "23", "45", "348", "3672" };
 
         Arrays.sort(strArr2);
@@ -34,8 +37,16 @@ public class TestArray {
         // reverse the array
         Collections.reverse(Arrays.asList(strArr2));
 
-        // after the reverse
+        // after the reverse hmm the original array is affected ...
         System.out.println(Arrays.toString(strArr2));
+
+        // can't do it on primitives ..
+        // convert array to list
+        String[] strtest = { "1", "2", "3" };
+        List<String> list2 = Arrays.asList(strtest);
+        System.out.println(list2.toString());
+
+        int[] arrint = { 8, 6, 4, 3, 1 };
 
     }
 
