@@ -12,6 +12,7 @@ public class BFS_DFS {
         adjacencyMatrix = new int[numNodes][numNodes];
         visited = new boolean[numNodes];
 
+        // define edges
         adjacencyMatrix[0][1] = 1;
         adjacencyMatrix[0][2] = 1;
         adjacencyMatrix[0][3] = 1;
@@ -30,10 +31,10 @@ public class BFS_DFS {
         }
 
         System.out.println("DFS");
-        dfs(0);
+        DFS(0);
 
         System.out.println("BFS");
-        bfs(0);
+        BFS(0);
     }
 
     // Step 1: Push the root node in the Stack.
@@ -43,7 +44,7 @@ public class BFS_DFS {
     // node, mark it as traversed and push it on stack.
     // Step 5: If the node does not have any unvisited child nodes, pop the node
     // from the stack.
-    public static void dfs(int rootNode) {
+    public static void DFS(int rootNode) {
         Stack<Integer> s = new Stack<Integer>();
         s.push(rootNode);
         visited[rootNode] = true;
@@ -68,7 +69,7 @@ public class BFS_DFS {
     // Step 3: Remove the node from the Queue.
     // Step 4: If the removed node has unvisited child nodes, mark them as
     // visited and insert the unvisited children in the queue.
-    public static void bfs(int rootNode) {
+    public static void BFS(int rootNode) {
         // BFS uses Queue data structure
         Queue<Integer> q = new LinkedList<Integer>();
         q.add(rootNode);
