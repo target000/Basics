@@ -14,16 +14,19 @@ public class ReverseArr {
 
     }
 
+    // O(n) time O(1) space, probably optimal
     // this method does it in-place
     public static void reverseArr(int[] arr) {
 
+        // arr == null is front for a reason
         if (arr == null || arr.length == 0) {
             return;
         }
 
         int mid = arr.length / 2;
 
-        // swap
+        // even elements, stop before center line
+        // odd elements, stop before center element
         for (int i = 0; i < mid; i++) {
             int temp = arr[i];
             arr[i] = arr[arr.length - i - 1];

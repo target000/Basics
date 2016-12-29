@@ -3,6 +3,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+// need to run with both adjacency list and adjacency matrix
+
 public class BFS_DFS {
     private static int[][] adjacencyMatrix;
     private static boolean[] visited;

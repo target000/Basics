@@ -22,7 +22,7 @@ public class MatrixOperation {
             reverseArr(mat[i]);
         }
 
-        // note that i < j
+        // note that i < j, when i == j it is the diagonal, no point to swap, when i > j you are undoing what you did with i < j
         // if above not applied, you end up with the same matrix since you will double count
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat[i].length; j++) {
