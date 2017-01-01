@@ -6,6 +6,8 @@ import java.util.Set;
 public class Top10ArrMethods {
     public static void main(String[] args) {
 
+        // didn't keep ones that uses apache common lib
+        
         // array to arraylist
         String[] stringArray = { "a", "b", "c", "d", "e" };
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));

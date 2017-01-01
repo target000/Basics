@@ -60,6 +60,8 @@ public class TestStringManipulations {
         for (String string : strArr) {
             System.out.println(string);
         }
+        
+        // get some string manipulation problems
 
     }
 }
