@@ -8,7 +8,7 @@ public class Top10ArrMethods {
 
         // didn't keep ones that uses apache common lib
         
-        // array to arraylist
+        // array -> arraylist
         String[] stringArray = { "a", "b", "c", "d", "e" };
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));
         System.out.println(arrayList);
@@ -18,13 +18,14 @@ public class Top10ArrMethods {
         boolean b = Arrays.asList(stringArray).contains("a");
         System.out.println(b);
 
-        // arraylist to array
+        // arraylist -> array
         String[] stringArr = new String[arrayList.size()];
         arrayList.toArray(stringArr);
         System.out.println(Arrays.toString(stringArr));
 
-        // array to set
+        // array -> set
         Set<String> set = new HashSet<String>(Arrays.asList(stringArray));
 
+        // set -> array
     }
 }
