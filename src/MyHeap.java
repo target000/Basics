@@ -55,7 +55,7 @@ public class MyHeap {
         bubbleUp(last);
     }
 
-    public Integer poll() {
+    public int poll() {
         int val = arr[1];
         if (last == 1) {
 
