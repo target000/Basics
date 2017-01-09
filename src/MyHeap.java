@@ -44,6 +44,10 @@ public class MyHeap {
         return last;
     }
 
+    public boolean isEmpty() {
+        return last == 0;
+    }
+
     public void add(int val) {
         if (last >= capacity - 1) {
             capacity *= 2;
@@ -79,6 +83,7 @@ public class MyHeap {
         arr[j] = temp;
     }
 
+    // key method
     public void bubbleUp(int last) {
 
         int i = last;
