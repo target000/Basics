@@ -5,7 +5,7 @@ public class TestSort {
 
         int[] arr = { 8, 75, -7, 91, 69, 31, 64, -28, 0, 56, -12, 5, 100, 9, 11, 84, 28, 4, -1 };
 
-        insertionSort(arr);
+        mergeSort(arr);
         System.out.println(isSorted(arr));
 
         System.out.println(Arrays.toString(arr));
@@ -68,6 +68,8 @@ public class TestSort {
         }
     }
 
+    // like the reverse of bubble sort, compare two elements side by side going from i back to 0
+    // use arr[j-1] > arr[j] swap order otherwise bail out
     public static void insertionSort(int[] arr) {
         if (arr == null || arr.length == 0) {
             return;
@@ -87,6 +89,46 @@ public class TestSort {
     }
 
     public static void mergeSort(int[] arr) {
+        int[] tempArr = new int[arr.length];
+        mergesortHelper(arr, 0, arr.length - 1, tempArr);
+    }
+
+    private static void mergesortHelper(int[] arr, int low, int high, int[] tmpArr) {
+
+        if (low < high) {
+            int mid = (low + high) / 2;
+            mergesortHelper(arr, low, mid, tmpArr);
+            mergesortHelper(arr, mid + 1, high, tmpArr);
+            mergeParts(arr, low, mid, high, tmpArr);
+        }
+    }
+
+    // key function
+    private static void mergeParts(int[] arr, int low, int mid, int high, int[] tmpArr) {
+
+        int i = low;
+        int j = mid + 1;
+        int k = low;
+
+        for (int x = low; x <= high; x++) {
+            tmpArr[x] = arr[x];
+        }
+
+        while (i <= mid && j <= high) {
+            if (tmpArr[i] < tmpArr[j]) {
+                arr[k++] = tmpArr[i++];
+            } else {
+                arr[k++] = tmpArr[j++];
+            }
+        }
+
+        while (i <= mid) {
+            arr[k++] = tmpArr[i++];
+        }
+
+        while (j <= high) {
+            arr[k++] = tmpArr[j++];
+        }
 
     }
 
