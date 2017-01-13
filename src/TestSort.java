@@ -104,6 +104,9 @@ public class TestSort {
     }
 
     // key function
+    // very interesting observation
+    // if [0 mid-1] [mid high] is used will result in index not updating
+    // use [0 mid] [mid+1 high]
     private static void mergeParts(int[] arr, int low, int mid, int high, int[] tmpArr) {
 
         int i = low;
