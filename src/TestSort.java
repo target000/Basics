@@ -5,7 +5,7 @@ public class TestSort {
 
         int[] arr = { 8, 5, 7, 1, 9 };
 
-        bubbleSort(arr);
+        insertionSort(arr);
 
         System.out.println(Arrays.toString(arr));
 
@@ -37,6 +37,7 @@ public class TestSort {
 
     }
 
+    // when things get confusing, use <= instead of <
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length == 0) {
             return;
@@ -54,7 +55,21 @@ public class TestSort {
     }
 
     public static void insertionSort(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
 
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j >= 1; j--) {
+                if (arr[j - 1] > arr[j]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = tmp;
+                } else {
+                    break;
+                }
+            }
+        }
     }
 
     public static void mergeSort(int[] arr) {
