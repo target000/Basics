@@ -3,12 +3,26 @@ import java.util.Arrays;
 public class TestSort {
     public static void main(String[] args) {
 
-        int[] arr = { 8, 5, 7, 1, 9 };
+        int[] arr = { 8, 75, -7, 91, 69, 31, 64, -28, 0, 56, -12, 5, 100, 9, 11, 84, 28, 4, -1 };
 
         insertionSort(arr);
+        System.out.println(isSorted(arr));
 
         System.out.println(Arrays.toString(arr));
 
+    }
+
+    public static boolean isSorted(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return true;
+        }
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void selectionSort(int[] arr) {
